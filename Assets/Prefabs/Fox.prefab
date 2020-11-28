@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4238440996529600617}
   - component: {fileID: 4238440996529600630}
-  - component: {fileID: 4238440996529600631}
   - component: {fileID: 4238440996529600616}
   - component: {fileID: 4238440996529600619}
   - component: {fileID: 4238440996529600621}
   - component: {fileID: 4238440996529600618}
   - component: {fileID: 4238440996529600620}
   - component: {fileID: 4238440996529600623}
+  - component: {fileID: 1050584205519530541}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -89,19 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4238440996529600631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4238440996529600628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 138f87c4225b78d45b6a9d488fc30f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4238440996529600616}
 --- !u!95 &4238440996529600616
 Animator:
   serializedVersion: 3
@@ -213,3 +200,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762963be6883ecf4cb39c361ac0d33c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1050584205519530541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238440996529600628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138f87c4225b78d45b6a9d488fc30f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
