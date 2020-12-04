@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &737881864991595733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2300819328211992519}
+  m_Layer: 0
+  m_Name: FeetPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2300819328211992519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737881864991595733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.115, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4238440996529600617}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4238440996529600628
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,13 +40,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4238440996529600617}
   - component: {fileID: 4238440996529600630}
-  - component: {fileID: 4238440996529600631}
   - component: {fileID: 4238440996529600616}
   - component: {fileID: 4238440996529600619}
   - component: {fileID: 4238440996529600621}
   - component: {fileID: 4238440996529600618}
   - component: {fileID: 4238440996529600620}
   - component: {fileID: 4238440996529600623}
+  - component: {fileID: 1050584205519530541}
+  - component: {fileID: 4223867080890953936}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -34,7 +65,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.7, y: -0.626, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2300819328211992519}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89,19 +121,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4238440996529600631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4238440996529600628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 138f87c4225b78d45b6a9d488fc30f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4238440996529600616}
 --- !u!95 &4238440996529600616
 Animator:
   serializedVersion: 3
@@ -213,3 +232,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762963be6883ecf4cb39c361ac0d33c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1050584205519530541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238440996529600628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138f87c4225b78d45b6a9d488fc30f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  rb: {fileID: 0}
+  runningSpeed: 0
+  jumpForce: 10
+  feetPosition: {fileID: 2300819328211992519}
+  checkRadius: 0.3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpTime: 0
+--- !u!114 &4223867080890953936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238440996529600628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8043dbad051189d4c896660a48d8fc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowJumpMultiplier: 2
+  fallMultiplier: 2.5
