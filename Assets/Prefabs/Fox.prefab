@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 4238440996529600620}
   - component: {fileID: 4238440996529600623}
   - component: {fileID: 1050584205519530541}
+  - component: {fileID: 4223867080890953936}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -245,10 +246,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   rb: {fileID: 0}
-  speed: 7
+  runningSpeed: 0
   jumpForce: 10
   feetPosition: {fileID: 2300819328211992519}
   checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
+  jumpTime: 0
+--- !u!114 &4223867080890953936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238440996529600628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8043dbad051189d4c896660a48d8fc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowJumpMultiplier: 2
+  fallMultiplier: 2.5

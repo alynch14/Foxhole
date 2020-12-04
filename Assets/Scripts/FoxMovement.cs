@@ -5,16 +5,13 @@ using UnityEngine;
 public class FoxMovement: MonoBehaviour
 {
     public Animator animator;
-    private bool isGrounded = true;
+    private bool isGrounded;
     public Rigidbody2D rb;
-    public float speed;
+    public float runningSpeed;
     public float jumpForce;
     public Transform feetPosition;
     public float checkRadius;
     public LayerMask whatIsGround;
-    private float jumpTimeCounter;
-    public float jumpTime;
-    private bool isJumping = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +25,7 @@ public class FoxMovement: MonoBehaviour
         animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
 
         //Move the rigidbody attached to the fox in the x and y directions
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
+        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * runningSpeed, rb.velocity.y);
     }
 
     private void Update()
@@ -38,28 +35,7 @@ public class FoxMovement: MonoBehaviour
         // If we are on the ground and space is pressed, jump
         if(isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
-        }
-
-        // If we hold down the space key after pressing,
-        // lets continue adding vertical momentum until we release the 'Space' key
-        if(Input.GetKey(KeyCode.Space) && isJumping)
-        {
-            if(jumpTimeCounter > 0)
-            {
-                rb.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
-            } else
-            {
-                isJumping = false;
-            }
-        }
-
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
         }
     }
 }
