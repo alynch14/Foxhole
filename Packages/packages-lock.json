@@ -118,7 +118,7 @@
     },
     "com.unity.render-pipelines.high-definition-config": {
       "version": "8.2.0",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.render-pipelines.core": "8.2.0"
