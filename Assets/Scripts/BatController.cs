@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BatController : MonoBehaviour
+public class BatController : Enemy
 {
+    public Animator animator;
+    private BatSonar sonar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,15 @@ public class BatController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        Animation(animator);
+    }
+
+    public void Aggro(Vector3 playerPosition)
+    {
+
     }
 }
