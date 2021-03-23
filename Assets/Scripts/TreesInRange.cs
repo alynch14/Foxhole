@@ -24,15 +24,15 @@ public class TreesInRange : MonoBehaviour
             {
                 BasicTrees treeDetected = hitTree.collider.GetComponent<BasicTrees>();
                 Debug.DrawRay(gameObject.transform.position, new Vector3((-gameObject.GetComponent<Rigidbody2D>().position.x) + tree.transform.position.x, tree.transform.position.y - gameObject.GetComponent<Rigidbody2D>().position.y, 0), Color.blue, 0.2f, false);
-                Debug.Log(gameObject.GetComponent<Rigidbody2D>().position.x);
-                Debug.Log(hitTree.point.x);
+                //Debug.Log(gameObject.GetComponent<Rigidbody2D>().position.x);
+                //Debug.Log(hitTree.point.x);
                 if (treeDetected)
                 {
-                    Debug.Log("Detected");
+                  //  Debug.Log("Detected");
                 }
                 else
                 {
-                    Debug.Log("Not Detected");
+                   // Debug.Log("Not Detected");
                 }
             }
         

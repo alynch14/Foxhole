@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 4223867080890953936}
   m_Layer: 0
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
-  jumpTime: 0
+  dashSpeed: 10
+  totalDashTime: 0.5
+  dashCoolDown: 0.5
 --- !u!114 &4223867080890953936
 MonoBehaviour:
   m_ObjectHideFlags: 0

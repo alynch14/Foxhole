@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FoxMovement: MonoBehaviour
 {
+    public static FoxMovement instance;
     public Animator animator;
     private bool isGrounded;
     public Rigidbody2D rb;
@@ -32,6 +33,7 @@ public class FoxMovement: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
         dashTimer = totalDashTime;
         dashCoolDownTimer = dashCoolDown;
